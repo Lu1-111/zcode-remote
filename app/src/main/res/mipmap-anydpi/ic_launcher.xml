@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  占位启动图标（自适应图标）。自适应图标从 Android 8.0（API 26）起支持，minSdk 正好是 26，
+  所以不需要带 -v26 限定的目录，这一个 mipmap-anydpi 就覆盖了全部机型。
+  要换图标：替换 drawable/ic_launcher_foreground.xml 里的图形，或改 colors.xml 的底色。
+-->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/ic_launcher_background" />
+    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+    <!-- Android 13 起的「主题图标」用同一图形。 -->
+    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
+</adaptive-icon>

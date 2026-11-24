@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ZCode 遥控</string>
+
+    <!-- 原生断网页（方案第 15 条 ⑤）。文案按 risks 第 3 条：不要把它说成登录问题，页面上不出现任何地址。 -->
+    <string name="web_error_title">页面没有加载出来</string>
+    <string name="web_error_body">请确认电脑端 ZCode 正在运行且已登录。\n也请检查手机的网络连接。</string>
+    <string name="web_error_retry">重试</string>
+    <!-- 按了「重试」之后这一页先不撤，要让人看得出重试已经在进行。 -->
+    <string name="web_error_retrying">正在重试…</string>
+
+    <!-- 页面想拉起别的 App（weixin://、intent:// 等）时被拦下的提示（方案第 5 条）。 -->
+    <string name="web_login_scheme_blocked">请使用页面内的验证码或密码方式登录</string>
+
+    <!-- window.open 打开的外链要交给系统浏览器，但设备上没有浏览器能接。 -->
+    <string name="web_no_browser">没有找到能打开这个链接的浏览器</string>
+
+    <!-- 保存副本（M4，方案第 16 条）。通道哪一步走不通就提示，不崩溃、不卡住。 -->
+    <string name="save_unsupported">暂不支持保存</string>
+    <string name="save_too_large">文件超过 50MB，无法保存副本</string>
+    <string name="save_saved">已保存副本</string>
+    <string name="save_failed">保存副本失败</string>
+
+    <!-- 通用按钮。 -->
+    <string name="action_cancel">取消</string>
+    <string name="action_save">保存</string>
+    <string name="action_close">关闭</string>
+    <string name="action_back">返回</string>
+
+    <!-- 电脑列表页（方案第 9、13 条）。界面只显示电脑名，不显示链接。 -->
+    <string name="list_title">电脑</string>
+    <string name="list_action_scan">扫码</string>
+    <string name="list_action_add">添加</string>
+    <string name="list_action_more">更多</string>
+    <string name="list_in_use">使用中</string>
+    <string name="list_last_used">最后使用：%1$s</string>
+    <string name="list_never_used">还没有使用过</string>
+    <string name="list_rename">改名</string>
+    <string name="list_delete">删除</string>
+    <string name="list_rename_title">给电脑改名</string>
+    <string name="list_rename_label">电脑名</string>
+    <string name="list_delete_title">删除「%1$s」？</string>
+    <string name="list_delete_body">只从本 App 的列表里删除，电脑端的远程控制不受影响。\n电脑名和链接都会从手机上清掉。</string>
+    <string name="list_delete_confirm">删除</string>
+    <string name="list_footer_hint">电脑从电脑端 ZCode 的远程控制弹窗里来：扫码或「复制链接」后添加到本 App。</string>
+
+    <!-- 引导页：第一次使用、还没有电脑（方案第 4、10、11、12、14 条）。 -->
+    <string name="onboarding_title">ZCode 遥控</string>
+    <string name="onboarding_subtitle">还没有添加电脑。在电脑端 ZCode 里打开远程控制弹窗，就能拿到二维码和链接。</string>
+    <string name="onboarding_fallback_entry">免扫码入口</string>
+    <string name="onboarding_fallback_hint">不扫码直接进：登录同一账号后，从页面里的电脑列表选择电脑。</string>
+    <string name="onboarding_ways_title">添加电脑的三种方式</string>
+    <string name="onboarding_way_scan">① 扫码：对准电脑端远控弹窗里的二维码。</string>
+    <string name="onboarding_way_paste">② 粘贴：点电脑端弹窗里的「复制链接」，回到本 App 粘贴（可以用「读取剪贴板」）。</string>
+    <string name="onboarding_way_share">③ 分享或打开链接：在浏览器里打开链接后，用系统「分享」发给本 App，或在「打开方式」里选本 App。</string>
+    <string name="onboarding_assetlinks_note">注意：zcode.z.ai 没有发布应用关联（assetlinks.json），系统不会自动唤起本 App——第一次要在「打开方式」里手动选一次，之后可以设为默认。</string>
+    <string name="onboarding_scan_button">扫码添加</string>
+    <string name="onboarding_add_button">手动添加</string>
+    <string name="onboarding_workspace_note">工作区：手机端不能新建或添加工作区，只能访问电脑端当前窗口里已打开的工作区；一个桌面窗口只有一个远控会话，要换窗口就在那个窗口再点一次远控入口。</string>
+
+    <!-- 添加电脑（粘贴，方案第 12 条）。 -->
+    <string name="add_title">添加电脑</string>
+    <string name="add_instructions">把电脑端弹窗里的链接粘贴到这里。链接会原样保存、原样加载，App 不会改动它。</string>
+    <string name="add_link_label">电脑链接</string>
+    <string name="add_link_placeholder">https://zcode.z.ai/remote/v4?…</string>
+    <string name="add_read_clipboard">读取剪贴板</string>
+    <string name="add_clipboard_confirm_title">读取剪贴板？</string>
+    <string name="add_clipboard_confirm_body">只读取一次剪贴板内容，填进下面的输入框。剪贴板里应当是电脑端「复制链接」复制的那条链接。</string>
+    <string name="add_clipboard_confirm_ok">读取</string>
+    <string name="add_clipboard_empty">剪贴板里没有可用的文本。</string>
+    <string name="add_save_and_connect">添加并连接</string>
+    <string name="add_open_entry">打开（不保存为电脑）</string>
+    <string name="add_valid_computer">识别到电脑：%1$s</string>
+    <string name="add_entry_link">这条链接不带电脑标识，是免扫码入口：可以直接打开，不会保存为电脑。</string>
+    <string name="add_invalid_link">不是有效的电脑链接：必须是 https://zcode.z.ai/remote/v4 开头的地址。</string>
+    <string name="link_legacy">旧版链接，请在电脑端重新打开远控弹窗扫码</string>
+
+    <!-- 扫码（方案第 10 条）。 -->
+    <string name="scan_title">扫码添加</string>
+    <string name="scan_hint">对准电脑端远控弹窗里的二维码</string>
+    <string name="scan_invalid">这个二维码不是电脑链接</string>
+    <string name="scan_permission_needed">扫码需要相机权限。不授权也可以改用粘贴方式添加。</string>
+    <string name="scan_grant_permission">授予权限</string>
+    <string name="scan_switch_to_paste">改用粘贴</string>
+
+    <!-- 设置与更多（放在电脑列表页；方案第 7 条退出登录、第 16 条建议项、方案 risks 第 4 条的提示）。 -->
+    <string name="more_title">更多</string>
+    <string name="more_reload">重新加载</string>
+    <string name="more_open_in_browser">在浏览器中打开</string>
+    <string name="more_copy_link">复制当前链接</string>
+    <string name="more_sign_out">退出登录</string>
+    <string name="more_browser_confirm_title">在浏览器中打开？</string>
+    <string name="more_browser_confirm_body">同一台电脑同一时间只能一个页面在线。在浏览器里打开后，App 里的这个页面可能被踢下线（反过来也一样），请错开使用。</string>
+    <string name="more_browser_confirm_ok">打开</string>
+    <string name="more_copy_confirm_title">复制当前链接？</string>
+    <string name="more_copy_confirm_body">链接等同于这台电脑的控制权，请像密码一样保管，不要发给不信任的人或群。确定复制到剪贴板吗？</string>
+    <string name="more_copy_confirm_ok">复制</string>
+    <string name="more_no_link_to_copy">当前没有可复制的电脑链接</string>
+    <string name="more_link_copied">已复制当前链接</string>
+    <string name="more_signout_confirm_title">退出登录？</string>
+    <string name="more_signout_confirm_body">将清除 App 里保存的登录状态（等同网页里的「切换账号」），已添加的电脑不受影响。确定退出登录吗？</string>
+    <string name="more_signout_confirm_ok">退出登录</string>
+    <string name="more_signed_out">已退出登录</string>
+</resources>

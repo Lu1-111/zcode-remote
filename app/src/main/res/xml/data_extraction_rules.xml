@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  应用私有数据里有账号登录态（WebView 的 localStorage 里是 JWT）和能控制电脑的链接，
+  云备份和设备迁移一律不带走。
+
+  与 AndroidManifest.xml 里的 android:allowBackup="false" 配合使用：allowBackup="false"
+  在部分厂商设备上拦不住设备到设备迁移，所以 cloud-backup 和 device-transfer 两段都写。
+  两个段内容保持一致。
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="root" path="." />
+        <exclude domain="file" path="." />
+        <exclude domain="database" path="." />
+        <exclude domain="sharedpref" path="." />
+        <exclude domain="external" path="." />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="root" path="." />
+        <exclude domain="file" path="." />
+        <exclude domain="database" path="." />
+        <exclude domain="sharedpref" path="." />
+        <exclude domain="external" path="." />
+    </device-transfer>
+</data-extraction-rules>

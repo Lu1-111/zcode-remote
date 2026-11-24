@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  自适应图标的前景层：画布 108dp，中央直径 66dp 的圆是安全区，启动器的各种蒙版都不会切到它。
+  图形是一个简洁的遥控器（方案对 M3 启动图标的要求）：白色描边的圆角机身，
+  顶部一枚电源圆点，下面两枚圆键和一条胶囊形的确认键，都在安全区内。
+  背景透明（底色 #161616 在 colors.xml）。线条画而不是实心块：小尺寸下更像一枚图标，不像一块板砖。
+  机身 34,30 到 74,78（40×48，中心 54,54），对角半径 sqrt(20^2+24^2)≈31.2 < 33，安全区容得下。
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 遥控器机身：圆角矩形描边。 -->
+    <path
+        android:pathData="M44,30 h20 a10,10 0 0 1 10,10 v28 a10,10 0 0 1 -10,10 h-20 a10,10 0 0 1 -10,-10 v-28 a10,10 0 0 1 10,-10 z"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="5"
+        android:strokeLineJoin="round" />
+
+    <!-- 电源键：机身顶部一枚实心圆。 -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,39.5 m-3.6,0 a3.6,3.6 0 1 1 7.2,0 a3.6,3.6 0 1 1 -7.2,0" />
+
+    <!-- 两枚圆键。 -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M47,55 m-3.4,0 a3.4,3.4 0 1 1 6.8,0 a3.4,3.4 0 1 1 -6.8,0" />
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M61,55 m-3.4,0 a3.4,3.4 0 1 1 6.8,0 a3.4,3.4 0 1 1 -6.8,0" />
+
+    <!-- 底部的胶囊键。 -->
+    <path
+        android:pathData="M46,65 h16 a3.2,3.2 0 0 1 0,6.4 h-16 a3.2,3.2 0 0 1 0,-6.4 z"
+        android:fillColor="#FFFFFFFF" />
+</vector>

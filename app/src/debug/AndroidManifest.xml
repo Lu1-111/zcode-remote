@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  只进 debug 包的清单合并规则。
+  debugImplementation 的 androidx.compose.ui:ui-tooling（Compose 预览）会带进一个导出的
+  PreviewActivity。去掉它，debug 包的导出组件就和 release 一致，scripts/verify-apk.sh
+  对两种包在「导出组件」这一项上给出同一个结论。
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application>
+        <activity
+            android:name="androidx.compose.ui.tooling.PreviewActivity"
+            tools:node="remove" />
+    </application>
+
+</manifest>
